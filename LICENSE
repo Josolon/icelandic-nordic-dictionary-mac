@@ -27,10 +27,26 @@ Practical compliance guidance:
 - Not allowed: redistributing this data, or derivatives of it, under a more
   restrictive license than CC BY-SA 4.0, or without attribution.
 
-This repository currently still ships build tooling only (no compiled
-.dictionary bundles or source data checked in) — that is a project choice
-for now, not a legal requirement under this license. See README.md's
-"Release Assets Policy" for current status.
+This Repository's Data License (share-alike compliance)
+--------------------------------------------------------
+This project publishes compiled .dictionary bundles (see GitHub Releases)
+that are adaptations of ISLEX 2026-02 data. Per the ShareAlike clause of
+CC BY-SA 4.0, that means:
+
+**The dictionary bundles and generated dictionary XML produced by this
+project — everything under `src/generated/`, the compiled `.dictionary`
+bundles, and any Release asset containing them — are themselves licensed
+under CC BY-SA 4.0, the same license as the ISLEX data they were built
+from.** This is not optional guidance for downstream users; it is this
+repository's own license grant over its distributed data output, required
+because ShareAlike propagates to adaptations.
+
+This does NOT apply to the build tooling itself (scripts, Makefile, CSS,
+plist templates) — see "Repository Code" below for that.
+
+If you redistribute a bundle from this project's Releases further, you
+must, in turn, keep attribution and keep it under CC BY-SA 4.0 as well —
+the obligation carries forward to you.
 
 Note: an earlier version of this project built from the ISLEX 2023-12
 release, which was CC BY-NC-ND 4.0 (no redistribution, non-commercial only).
@@ -66,10 +82,31 @@ Attribution Notes
 
 Repository Code
 ---------------
-Unless otherwise stated in specific files, repository code is provided for
-building the dictionary locally and does not grant rights to redistribute
-licensed source data or derivative dictionary bundles beyond what upstream
-licenses permit.
+The build tooling in this repository — Python scripts, Makefile, CSS
+stylesheet, and plist templates, i.e. everything except the ISLEX-derived
+dictionary data covered above — is provided under the MIT License:
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to
+deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+sell copies of the Software, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+
+Copyright (c) Jónatan Sólon and contributors.
+
+This MIT grant covers the code only. It does not grant any rights over the
+ISLEX-derived data beyond what CC BY-SA 4.0 itself permits (see above).
 
 No Warranty
 -----------

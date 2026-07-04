@@ -19,11 +19,24 @@ This project builds from the **ISLEX 2026-02** release, distributed under
 
 This is a change from earlier versions of this project, which built from the
 **2023-12** release (CC BY-NC-ND 4.0 — no redistribution, non-commercial
-only). This repository still ships build tooling only (no compiled
-`.dictionary` bundles or source data checked in), but that's now a choice
-rather than a legal requirement — see "Release Assets Policy" below.
+only).
+
+Because ShareAlike propagates to adaptations, **the compiled `.dictionary`
+bundles and generated dictionary XML this project produces and publishes are
+themselves licensed under CC BY-SA 4.0** — this is stated explicitly as this
+repository's own license grant in [LICENSE](LICENSE), not just described as
+something the upstream license "allows." The build tooling itself (scripts,
+Makefile, CSS, plist templates) is separately licensed under MIT — see
+LICENSE for the full split.
 
 Read [LICENSE](LICENSE) for the full summary and links.
+
+## Just want the dictionaries? Download them
+
+You don't need to build anything yourself. Compiled bundles for all 14
+editions are on the [Releases page](https://github.com/Josolon/icelandic-nordic-dictionary-mac/releases) —
+download the `.dictionary.zip` for the language pair(s) you want, unzip, and
+drop the resulting `NAME.dictionary` folder into `~/Library/Dictionaries/`.
 
 ## What gets built
 
@@ -199,18 +212,38 @@ make install
 
 ## Attribution
 
-- Lexical source data: edited by Þórdís Úlfarsdóttir and Halldóra Jónsdóttir,
-  published by Stofnun Árna Magnússonar í íslenskum fræðum, via CLARIN Iceland.
-- Build/integration tooling in this repository: Jónatan Sólon and contributors.
+ISLEX — Icelandic-Scandinavian multilingual dictionary (2026-02), CC BY-SA 4.0:
 
-See [CREDITS.md](CREDITS.md) for full attribution, including all six
-participating national teams.
+- **Editors of record**: Þórdís Úlfarsdóttir, Halldóra Jónsdóttir
+- **Publisher**: Stofnun Árna Magnússonar í íslenskum fræðum (The Árni
+  Magnússon Institute for Icelandic Studies), Reykjavík
+- **Participating institutions**, one per target language:
+
+  | Country | Institution |
+  |---|---|
+  | Iceland | Stofnun Árna Magnússonar í íslenskum fræðum (source language + system) |
+  | Denmark | Det Danske Sprog- og Litteraturselskab, Copenhagen |
+  | Sweden | Institutionen för svenska språket, Göteborgs universitet |
+  | Norway | Institutt for lingvistiske, litterære og estetiske studier, Universitetet i Bergen |
+  | Faroe Islands | Fróðskaparsetur Føroya, Tórshavn |
+  | Finland | Háskólinn í Helsinki |
+
+- **Also documented as ISLEX contributors** in the project's own published
+  literature: Jón Hilmar Jónsson (editor on the prior 2023-12 release),
+  Aldís Sigurðardóttir, Anna Hannesdóttir, Håkan Jansson, Lars Trap-Jensen,
+  Margunn Rauset, and Kristín Bjarnadóttir (led the predecessor project).
+- **Build/integration tooling in this repository**: Jónatan Sólon and contributors.
+
+Source: https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376
+
+See [CREDITS.md](CREDITS.md) for the full citation, sourcing for each name
+above, and the complete data-version history.
 
 ## Release Assets Policy
 
-CC BY-SA 4.0 permits redistributing compiled `.dictionary` bundles (with
-attribution, under the same share-alike license). This repository currently
-still ships **build tooling only** — that's a deliberate choice, not a legal
-requirement anymore. Publishing compiled bundles (e.g. via GitHub Releases)
-is a separate decision involving hosting/size tradeoffs (`NordicIcelandic`
-alone compiles to ~300MB+) that hasn't been made yet.
+Compiled `.dictionary` bundles for all 14 editions are published as zipped
+assets on the [GitHub Releases page](https://github.com/Josolon/icelandic-nordic-dictionary-mac/releases),
+starting with `v2026.02` (matching the ISLEX data version). This is possible
+because CC BY-SA 4.0 permits redistribution — see the License Context above.
+If you download and further redistribute one of these bundles, you must keep
+attribution and keep it under CC BY-SA 4.0 in turn (see LICENSE and CREDITS.md).

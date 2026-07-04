@@ -86,6 +86,14 @@ migrating, not assumed from changelog text.
 - Dictionary conversion/build scripts and packaging in this repository:
   Jónatan Sólon and contributors.
 
+## Compiled bundles
+
+Compiled `.dictionary` bundles built from this data are published at
+https://github.com/Josolon/icelandic-nordic-dictionary-mac/releases —
+each bundle is itself CC BY-SA 4.0 (see LICENSE's "This Repository's Data
+License" section); if you redistribute one further, keep this attribution
+and the same license with it.
+
 ## License Reminder
 
 ISLEX 2026-02 (the version this project uses) is CC BY-SA 4.0: attribution
