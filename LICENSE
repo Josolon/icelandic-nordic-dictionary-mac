@@ -1,0 +1,57 @@
+Project License Notice
+======================
+
+This repository contains:
+1) Build/tooling code in this repository (scripts, Makefile, styles, plist metadata).
+2) Dictionary source data obtained from an external provider (ISLEX).
+
+The legal terms for (2) are not overridden by this repository.
+
+Data License Summary (Important)
+--------------------------------
+The lexical data pipeline depends on ISLEX, the Icelandic-Scandinavian
+multilingual dictionary distributed under Creative Commons
+Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+by Stofnun Árna Magnússonar í íslenskum fræðum / CLARIN Iceland.
+
+Under CC BY-NC-ND 4.0, generated dictionary bundles must be treated as
+derivative, non-commercial-only outputs of the licensed data.
+
+Practical compliance guidance:
+- Allowed: local/private building and personal, non-commercial usage with attribution.
+- Not allowed: redistributing modified source data.
+- Not allowed: redistributing compiled .dictionary bundles produced from ISLEX data.
+- Not allowed: any commercial use.
+- This repository therefore ships only build tooling — never compiled
+  .dictionary bundles, and never a copy of the ISLEX XML itself.
+
+You are responsible for verifying current terms at the original data source.
+If source licensing changes, update this notice and your distribution behavior.
+
+Upstream License Links
+----------------------
+- CC BY-NC-ND 4.0 legal code:
+  https://creativecommons.org/licenses/by-nc-nd/4.0/
+- ISLEX dataset record (CLARIN Iceland repository):
+  https://repository.clarin.is/repository/xmlui/handle/20.500.12537/319
+- ISLEX project home:
+  https://islex.is
+
+Attribution Notes
+-----------------
+- Lexical source material is attributed to Stofnun Árna Magnússonar í íslenskum
+  fræðum and the ISLEX Nordic partner institutions (Denmark, Norway, Sweden,
+  Faroe Islands, Finland), via the CLARIN Iceland repository.
+- Build orchestration, conversion, and packaging scripts in this repository are
+  authored by repository contributors.
+
+Repository Code
+---------------
+Unless otherwise stated in specific files, repository code is provided for
+building the dictionary locally and does not grant rights to redistribute
+licensed source data or derivative dictionary bundles beyond what upstream
+licenses permit.
+
+No Warranty
+-----------
+This project is provided "as is", without warranty of any kind.
