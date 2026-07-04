@@ -21,7 +21,7 @@ from collections import defaultdict
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from parse_islex import TARGET_LANGS, parse_islex
 
-SOURCE_XML = "data/ISLEX_dictionary_2023-12.xml"
+SOURCE_XML = "data/ISLEX_2026-02.xml"
 CACHE_JSON = "data/islex_parsed.json"
 BIN_CACHE_JSON = "data/bin_paradigms_cache.json"
 OUT_DIR = "src/generated"
@@ -124,8 +124,8 @@ def load_entries():
             return json.load(f)
     if not os.path.exists(SOURCE_XML):
         raise FileNotFoundError(
-            f"Missing {SOURCE_XML}. Download ISLEX_dictionary_2023-12.xml.zip from "
-            "https://repository.clarin.is/repository/xmlui/handle/20.500.12537/319 "
+            f"Missing {SOURCE_XML}. Download ISLEX_2026-02.zip from "
+            "https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376 "
             "and unzip it into data/."
         )
     entries = parse_islex(SOURCE_XML)

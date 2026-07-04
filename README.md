@@ -6,18 +6,22 @@ bundles, so lookup works system-wide via macOS "Look Up".
 
 ## Important License Context
 
-ISLEX is distributed under **CC BY-NC-ND 4.0** (Non-Commercial, No
-Derivatives) by Stofnun Árna Magnússonar í íslenskum fræðum via CLARIN
-Iceland. That means:
+This project builds from the **ISLEX 2026-02** release, distributed under
+**CC BY-SA 4.0** (Attribution, ShareAlike) by Stofnun Árna Magnússonar í
+íslenskum fræðum via CLARIN Iceland. That means:
 
-- You should build locally for private, non-commercial, personal use only.
-- You should **not** redistribute compiled `.dictionary` bundles.
-- You should **not** publish converted/modified copies of the source data.
-- Always keep attribution.
+- Redistribution — including compiled `.dictionary` bundles — is allowed,
+  provided you keep attribution and license any redistributed derivative
+  under the same CC BY-SA 4.0 terms.
+- Commercial use is allowed (CC BY-SA has no NonCommercial clause).
+- Always keep attribution — see [CREDITS.md](CREDITS.md) for exactly who to
+  credit.
 
-Because of the ND clause, **pre-compiled `.dictionary` files cannot be hosted
-or shared from this repository.** This repo is build tooling only — you fetch
-the source data and compile it yourself.
+This is a change from earlier versions of this project, which built from the
+**2023-12** release (CC BY-NC-ND 4.0 — no redistribution, non-commercial
+only). This repository still ships build tooling only (no compiled
+`.dictionary` bundles or source data checked in), but that's now a choice
+rather than a legal requirement — see "Release Assets Policy" below.
 
 Read [LICENSE](LICENSE) for the full summary and links.
 
@@ -77,7 +81,7 @@ not Icelandic.
   all (language, direction) combinations; enriches Icelandic-headword entries
   with BÍN paradigms unless `--no-morphology` is passed.
 - `scripts/install_dictionary.sh`: One-command build + install for new users.
-- `data/ISLEX_dictionary_2023-12.xml`: Source data you download (gitignored).
+- `data/ISLEX_2026-02.xml`: Source data you download (gitignored).
 - `data/islex_parsed.json`: Cached parse output (gitignored, regenerate any
   time by deleting it).
 - `data/bin_paradigms_cache.json`: Cached BÍN lookups keyed by lemma+POS
@@ -109,9 +113,9 @@ sudo mv "/Applications/Additional Tools for Xcode" "/Applications/XcodeAdditiona
 
 ## Getting the source data
 
-1. Download `ISLEX_dictionary_2023-12.xml.zip` from CLARIN Iceland:
-   https://repository.clarin.is/repository/xmlui/handle/20.500.12537/319
-2. Unzip it so that `data/ISLEX_dictionary_2023-12.xml` exists in this repo.
+1. Download `ISLEX_2026-02.zip` from CLARIN Iceland:
+   https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376
+2. Unzip it so that `data/ISLEX_2026-02.xml` exists in this repo.
    (This directory is gitignored — the file stays local to your machine.)
 
 ## Build
@@ -174,7 +178,9 @@ but takes the full time again.
 
 ## Update Workflow
 
-When source data changes, delete the cache and rebuild:
+When source data changes, delete the cache and rebuild (the BÍN paradigm
+cache is keyed by lemma+POS and safe to keep — it's independent of which
+ISLEX release you're using, and reuses cached lookups for unchanged words):
 
 ```bash
 rm data/islex_parsed.json
@@ -193,14 +199,18 @@ make install
 
 ## Attribution
 
-- Lexical source data: Stofnun Árna Magnússonar í íslenskum fræðum, via
-  CLARIN Iceland.
+- Lexical source data: edited by Þórdís Úlfarsdóttir and Halldóra Jónsdóttir,
+  published by Stofnun Árna Magnússonar í íslenskum fræðum, via CLARIN Iceland.
 - Build/integration tooling in this repository: Jónatan Sólon and contributors.
 
-See [CREDITS.md](CREDITS.md) for full attribution.
+See [CREDITS.md](CREDITS.md) for full attribution, including all six
+participating national teams.
 
 ## Release Assets Policy
 
-- Do not upload prebuilt `.dictionary` bundles or the ISLEX XML to GitHub
-  Releases — ND terms forbid it.
-- Only build scripts and documentation may be published/distributed.
+CC BY-SA 4.0 permits redistributing compiled `.dictionary` bundles (with
+attribution, under the same share-alike license). This repository currently
+still ships **build tooling only** — that's a deliberate choice, not a legal
+requirement anymore. Publishing compiled bundles (e.g. via GitHub Releases)
+is a separate decision involving hosting/size tradeoffs (`NordicIcelandic`
+alone compiles to ~300MB+) that hasn't been made yet.

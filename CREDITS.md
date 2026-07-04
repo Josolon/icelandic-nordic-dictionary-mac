@@ -7,22 +7,22 @@ Apple Dictionary format.
 
 ## Dataset used by this project
 
-- **ISLEX — Icelandic-Scandinavian multilingual dictionary (2023-12 release)**
-- Editors of record (dataset creators, per the CLARIN-IS catalog entry):
-  **Þórdís Úlfarsdóttir**, **Halldóra Jónsdóttir**, **Jón Hilmar Jónsson**
+- **ISLEX — Icelandic-Scandinavian multilingual dictionary (2026-02 release)**
+- Editors of record (dataset authors, per the dataset's own embedded metadata):
+  **Þórdís Úlfarsdóttir**, **Halldóra Jónsdóttir**
 - Publisher: Stofnun Árna Magnússonar í íslenskum fræðum (The Árni Magnússon
   Institute for Icelandic Studies), Reykjavík
-- Persistent record: https://repository.clarin.is/repository/xmlui/handle/20.500.12537/319
-- License: **CC BY-NC-ND 4.0** — https://creativecommons.org/licenses/by-nc-nd/4.0/
-  (this is *why* this project only distributes build tooling, never compiled
-  dictionaries or the source data itself — see LICENSE)
+- Persistent record: https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376
+- License: **CC BY-SA 4.0** — https://creativecommons.org/licenses/by-sa/4.0/
+  (attribution + share-alike; redistribution of derivatives, including
+  compiled dictionary bundles, is allowed under the same license — see LICENSE)
 
 Suggested citation:
 
-> Úlfarsdóttir, Þórdís, Halldóra Jónsdóttir og Jón Hilmar Jónsson (ritstj.).
-> *ISLEX — Icelandic-Scandinavian multilingual dictionary* (2023-12).
+> Úlfarsdóttir, Þórdís og Halldóra Jónsdóttir (ritstj.).
+> *ISLEX — Icelandic-Scandinavian multilingual dictionary* (2026-02).
 > Stofnun Árna Magnússonar í íslenskum fræðum / CLARIN-IS.
-> http://hdl.handle.net/20.500.12537/319
+> http://hdl.handle.net/20.500.12537/376
 
 ## Participating institutions
 
@@ -48,9 +48,13 @@ own target language.
 
 The following people are named as ISLEX project contributors in the
 project's own published literature (cited below); listed here for fuller
-attribution beyond the two/three names recorded as formal dataset creators
-in the CLARIN catalog entry:
+attribution beyond the names recorded as formal dataset creators in the
+dataset's own metadata:
 
+- **Jón Hilmar Jónsson** — credited as a dataset editor on the prior
+  **2023-12** ISLEX release (the version this project used before migrating
+  to 2026-02); no longer listed as an author on the 2026-02 metadata, but
+  his earlier editorial contribution to ISLEX is part of its history.
 - **Aldís Sigurðardóttir**, **Anna Hannesdóttir**, **Håkan Jansson**,
   **Lars Trap-Jensen** — co-authors, *ISLEX - An Icelandic-Scandinavian
   Multilingual Online Dictionary*, Proceedings of the XIII Euralex
@@ -64,22 +68,18 @@ in the CLARIN catalog entry:
 Source: Úlfarsdóttir, Þórdís. *ISLEX – norræn margmála orðabók*, 2012.
 https://islex.is/greinar/islex2012-OogT.pdf
 
-## A note on data versions and licensing
+## Data version history (as used by this project)
 
-This project builds from the **2023-12** ISLEX release (CC BY-NC-ND 4.0,
-handle `.../319`), which is why this repository is build-tooling-only and
-never distributes compiled dictionaries.
+| Version | Handle | License | Editors of record |
+|---|---|---|---|
+| 2023-12 | `.../319` | CC BY-NC-ND 4.0 | Þórdís Úlfarsdóttir, Halldóra Jónsdóttir, Jón Hilmar Jónsson |
+| **2026-02 (current)** | `.../376` | **CC BY-SA 4.0** | Þórdís Úlfarsdóttir, Halldóra Jónsdóttir |
 
-A **newer 2026-02 release** exists (handle
-`.../376`, https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376),
-credited to Þórdís Úlfarsdóttir and Halldóra Jónsdóttir, and licensed under
-**CC BY-SA 4.0** instead — a materially more permissive, share-alike license
-that would change what this project is legally allowed to do (e.g.
-redistribution with attribution, under share-alike terms). This project has
-**not** been migrated to that release; doing so would be a deliberate,
-separate decision (new source data, re-verify the license terms directly
-before relying on this note, and likely a version bump across the whole
-build pipeline).
+This project originally built from the 2023-12 release and has since
+migrated to 2026-02, which added ~55 entries, removed ~31, and revised
+roughly 4,700 more (translation/example corrections, expanded Norwegian
+Bokmål/Nynorsk coverage) — verified directly against both XML dumps before
+migrating, not assumed from changelog text.
 
 ## Tooling and Packaging
 
@@ -88,6 +88,6 @@ build pipeline).
 
 ## License Reminder
 
-ISLEX 2023-12 (the version this project uses) is CC BY-NC-ND 4.0: personal,
-non-commercial use only, no redistribution of the source data or of any
-compiled dictionary bundle built from it. See LICENSE for full detail.
+ISLEX 2026-02 (the version this project uses) is CC BY-SA 4.0: attribution
+required, and any redistributed derivative (including a compiled dictionary
+bundle) must carry the same CC BY-SA 4.0 license. See LICENSE for full detail.

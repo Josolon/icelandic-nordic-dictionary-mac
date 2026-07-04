@@ -9,44 +9,58 @@ The legal terms for (2) are not overridden by this repository.
 
 Data License Summary (Important)
 --------------------------------
-The lexical data pipeline depends on ISLEX, the Icelandic-Scandinavian
-multilingual dictionary distributed under Creative Commons
-Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
-by Stofnun Árna Magnússonar í íslenskum fræðum / CLARIN Iceland.
+The lexical data pipeline depends on ISLEX (2026-02 release), the
+Icelandic-Scandinavian multilingual dictionary distributed under Creative
+Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) by Stofnun
+Árna Magnússonar í íslenskum fræðum / CLARIN Iceland.
 
-Under CC BY-NC-ND 4.0, generated dictionary bundles must be treated as
-derivative, non-commercial-only outputs of the licensed data.
+Under CC BY-SA 4.0, you may copy, redistribute, and adapt the data —
+including in the form of a compiled dictionary bundle — provided you:
+- give appropriate attribution (see CREDITS.md for exactly who/what to credit), and
+- distribute any such derivative under this same CC BY-SA 4.0 license.
 
 Practical compliance guidance:
-- Allowed: local/private building and personal, non-commercial usage with attribution.
-- Not allowed: redistributing modified source data.
-- Not allowed: redistributing compiled .dictionary bundles produced from ISLEX data.
-- Not allowed: any commercial use.
-- This repository therefore ships only build tooling — never compiled
-  .dictionary bundles, and never a copy of the ISLEX XML itself.
+- Allowed: local/private building and personal usage with attribution.
+- Allowed: redistributing compiled .dictionary bundles, with attribution,
+  under CC BY-SA 4.0.
+- Allowed: commercial use (CC BY-SA 4.0 has no NonCommercial restriction).
+- Not allowed: redistributing this data, or derivatives of it, under a more
+  restrictive license than CC BY-SA 4.0, or without attribution.
+
+This repository currently still ships build tooling only (no compiled
+.dictionary bundles or source data checked in) — that is a project choice
+for now, not a legal requirement under this license. See README.md's
+"Release Assets Policy" for current status.
+
+Note: an earlier version of this project built from the ISLEX 2023-12
+release, which was CC BY-NC-ND 4.0 (no redistribution, non-commercial only).
+This project has since migrated to the 2026-02 release; if you are building
+from a different ISLEX release than 2026-02, verify its license directly —
+do not assume it matches this notice.
 
 You are responsible for verifying current terms at the original data source.
 If source licensing changes, update this notice and your distribution behavior.
 
 Upstream License Links
 ----------------------
-- CC BY-NC-ND 4.0 legal code:
-  https://creativecommons.org/licenses/by-nc-nd/4.0/
-- ISLEX dataset record (CLARIN Iceland repository):
-  https://repository.clarin.is/repository/xmlui/handle/20.500.12537/319
+- CC BY-SA 4.0 legal code:
+  https://creativecommons.org/licenses/by-sa/4.0/
+- ISLEX dataset record (CLARIN Iceland repository, 2026-02 release used here):
+  https://repository.clarin.is/repository/xmlui/handle/20.500.12537/376
 - ISLEX project home:
-  https://islex.is
+  https://islex.arnastofnun.is
 
 Attribution Notes
 -----------------
-- Lexical source material is edited by Þórdís Úlfarsdóttir, Halldóra Jónsdóttir
-  and Jón Hilmar Jónsson (dataset creators of record for the 2023-12 ISLEX
-  release used here), published by Stofnun Árna Magnússonar í íslenskum
-  fræðum, in collaboration with the ISLEX Nordic partner institutions in
-  Denmark, Norway, Sweden, the Faroe Islands and Finland, via the CLARIN
-  Iceland repository.
+- Lexical source material is edited by Þórdís Úlfarsdóttir and Halldóra
+  Jónsdóttir (dataset authors of record for the 2026-02 ISLEX release used
+  here), published by Stofnun Árna Magnússonar í íslenskum fræðum, in
+  collaboration with the ISLEX Nordic partner institutions in Denmark,
+  Norway, Sweden, the Faroe Islands and Finland, via the CLARIN Iceland
+  repository.
 - See CREDITS.md for the full citation, the complete list of participating
-  institutions per country, and additional documented project contributors.
+  institutions per country, additional documented project contributors, and
+  the data version history.
 - Build orchestration, conversion, and packaging scripts in this repository are
   authored by repository contributors.
 
