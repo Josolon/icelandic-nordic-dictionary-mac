@@ -39,9 +39,14 @@ Upstream License Links
 
 Attribution Notes
 -----------------
-- Lexical source material is attributed to Stofnun Árna Magnússonar í íslenskum
-  fræðum and the ISLEX Nordic partner institutions (Denmark, Norway, Sweden,
-  Faroe Islands, Finland), via the CLARIN Iceland repository.
+- Lexical source material is edited by Þórdís Úlfarsdóttir, Halldóra Jónsdóttir
+  and Jón Hilmar Jónsson (dataset creators of record for the 2023-12 ISLEX
+  release used here), published by Stofnun Árna Magnússonar í íslenskum
+  fræðum, in collaboration with the ISLEX Nordic partner institutions in
+  Denmark, Norway, Sweden, the Faroe Islands and Finland, via the CLARIN
+  Iceland repository.
+- See CREDITS.md for the full citation, the complete list of participating
+  institutions per country, and additional documented project contributors.
 - Build orchestration, conversion, and packaging scripts in this repository are
   authored by repository contributors.
 
